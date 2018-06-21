@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dtbuilder": "0.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "styled-components": "^3.3.3"
   },
   "scripts": {
+    "prestart": "dtbuilder -i src/styles/tokens.yaml -o public/styles -f css",
     "start": "react-scripts start",
+    "prebuild": "dtbuilder -i src/styles/tokens.yaml -o public/styles -f css",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
