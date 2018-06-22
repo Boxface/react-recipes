@@ -4,16 +4,18 @@
 	"private": true,
 	"dependencies": {
 		"react": "^16.4.1",
+		"react-app-rewire-styled-components": "^3.0.2",
+		"react-app-rewired": "^1.5.2",
 		"react-dom": "^16.4.1",
 		"react-scripts": "1.1.4",
 		"styled-components": "^3.3.3",
-		"tay": "^0.1.0"
+		"tay": "^1.0.0"
 	},
 	"scripts": {
-		"prestart": "tay -i src/styles/tokens.yaml -o public/styles -f css",
-		"start": "react-scripts start",
-		"prebuild": "tay -i src/styles/tokens.yaml -o public/styles -f css",
-		"build": "react-scripts build",
+		"prestart": "tay -i src/styles/tokens.yaml -o public/styles -o .storybook -f css",
+		"start": "react-app-rewired start",
+		"prebuild": "tay -i src/styles/tokens.yaml -o public/styles -o .storybook -f css",
+		"build": "react-app-rewired build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
 		"storybook": "start-storybook -p 9009 -s public",
