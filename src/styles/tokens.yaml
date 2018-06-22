@@ -1,27 +1,24 @@
 ---
 color:
-    background:
-        fill: "#191D25"
-        tile: "#24292F"
-    text:
-        positive: "#50C878"
-        negative: "#F70087"
-        strong: white
-        dim: rgba(255, 255, 255, 0.5)
-font:
-    heading:
-        url: "https://fonts.googleapis.com/css?family=Open+Sans"
-        family: Open Sans, sans-serif
-        weight: 700
-    body:
-        url: "https://fonts.googleapis.com/css?family=Open+Sans"
-        family: Open Sans, sans-serif
-        weight: 300
+    white: "#FFFFFF"
+
+    grey: "#BEBEBE"
+    grey-dark: "#808080"
+
+    red: "#DB0011"
+    red-dark: "#8B0000"
+
 spacing:
     large: 30px
     medium: 20px
     small: 10px
+
+padding:
+    large: 30px
+    medium: 20px
+    small: 10px
+
 radius:
-    large: 15px
-    medium: 10px
+    large: 30px
+    medium: 15px
     small: 5px

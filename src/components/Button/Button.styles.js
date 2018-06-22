@@ -1,18 +1,47 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button`
-	user-select: none;
-	font-size: 1em;
-	color: white;
-	font-family: Times New Roman;
-	border-radius: 30px;
-	background-color: #db0011;
-	padding: 18px 36px;
-	border: 2px solid #000000;
+const StyledButton = styled.button.attrs({
+	type: "button",
+})`
+	border-radius: var(--radius-large);
+	border-width: 2px;
+	border-style: solid;
 	cursor: pointer;
-	Button-text::first-letter {
-		text-transform: capitalize;
+	font-family: Arial;
+	font-size: 1em;
+	padding: var(--padding-medium) var(--padding-large);
+	transition: background-color 0.6s, color 0.6s;
+	user-select: none;
+`;
+
+export const PrimaryButton = StyledButton.extend`
+	background: var(--color-red);
+	border-color: var(--color-red);
+	color: var(--color-white);
+	&:hover {
+		background-color: var(--color-white);
+		border-color: var(--color-red);
+		color: var(--color-red);
+	}
+	&:focus {
+		background-color: var(--color-white);
+		border-color: var(--color-red-dark);
+		color: var(--color-red-dark);
 	}
 `;
 
-export default StyledButton;
+export const SecondaryButton = StyledButton.extend`
+	background: var(--color-grey);
+	border-color: var(--color-grey);
+	color: var(--color-white);
+	&:hover {
+		background-color: var(--color-white);
+		border-color: var(--color-grey);
+		color: var(--color-grey);
+	}
+	&:focus {
+		background-color: var(--color-white);
+		border-color: var(--color-grey-dark);
+		color: var(--color-grey-dark);
+	}
+`;

@@ -2,10 +2,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Button from "./Button";
+import { PrimaryButton, SecondaryButton } from "./Button";
 
-storiesOf("Button", module)
-	.add("Primary Button", () => <Button>Primary Button</Button>)
+storiesOf("Buttons", module)
+	.add("Primary Button", () => <PrimaryButton>Primary Button</PrimaryButton>)
 	.add("Secondary Button", () => (
-		<Button variant="secondary">Secondary button</Button>
+		<SecondaryButton>Secondary button</SecondaryButton>
 	));
