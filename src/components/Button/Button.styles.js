@@ -10,7 +10,8 @@ const StyledButton = styled.button.attrs({
 	font-family: Arial;
 	font-size: 1em;
 	padding: var(--padding-medium) var(--padding-large);
-	transition: background-color 0.6s, color 0.6s;
+	transition: background-color var(--transition-button),
+		color var(--transition-button);
 	user-select: none;
 `;
 
