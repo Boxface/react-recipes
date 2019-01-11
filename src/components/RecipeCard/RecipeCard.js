@@ -10,18 +10,13 @@ import {
 	RecipeImage,
 	RecipeIngredientList,
 	RecipeIngredient,
-} from "./Recipe.styles";
+} from "./RecipeCard.styles";
 
-const RecipeComponent = ({ name, image, ingredient }) => (
+const RecipeCardComponent = ({ name, image, ingredient }) => (
 	<Recipe>
 		<RecipeHeader>
 			<h2>{name}</h2>
 			<RecipeOptions>
-				<RecipeOptionLink>
-					<a href="" title="">
-						Add
-					</a>
-				</RecipeOptionLink>
 				<RecipeOptionLink>
 					<a href="" title="">
 						Edit
@@ -46,13 +41,13 @@ const RecipeComponent = ({ name, image, ingredient }) => (
 	</Recipe>
 );
 
-RecipeComponent.description = "Individual recipe";
+RecipeCardComponent.description = "Individual recipe";
 
-RecipeComponent.propTypes = {
-	name: PropTypes.string.Required,
+RecipeCardComponent.propTypes = {
+	name: PropTypes.string.isRequired,
 	image: PropTypes.string,
-	ingredient: PropTypes.string,
+	ingredient: PropTypes.string.isRequired,
 };
 
-export default RecipeComponent;
+export default RecipeCardComponent;
 export { RecipeHeader, RecipeOptions, RecipeMeta, RecipeImage };
