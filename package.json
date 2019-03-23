@@ -9,7 +9,7 @@
 		"react-dom": "^16.4.1",
 		"react-scripts": "1.1.4",
 		"styled-components": "^3.3.3",
-		"tay": "^1.0.0"
+		"tay": "^1.2.0"
 	},
 	"scripts": {
 		"prestart": "tay -i src/styles/tokens.yaml -o public/styles -o .storybook -f css",

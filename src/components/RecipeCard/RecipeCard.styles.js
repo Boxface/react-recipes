@@ -1,18 +1,38 @@
 import styled from "styled-components";
 
 export const Recipe = styled.div`
-	border-radius: var(--radius-large);
-	border: 2px solid #000;
+	background: url("https://foodscene.deliveroo.co.uk/assets/images/blogs/foodscene.deliveroo.co.uk/en/cuisine-inspiration/1VP8qCuBL71rpsb9bQ8g8pDD5T6ds77raI4g10yP_vEM/h_katsu_curry_cropped.jpg?v=1.01") no-repeat 50% 50% transparent;
+	background-size: cover;
+	flex-basis: 100%;
 	font-family: Arial;
 	font-size: 1em;
-	padding: var(--padding-medium) var(--padding-large);
-	margin-bottom: var(--padding-medium);
+	min-height: 200px;
+	padding: 25px;
+
+	@media (min-width: 640px) {
+    	flex-basis: 50%;
+  	}
+
+	@media (min-width: 768px) {
+    	flex-basis: calc(100% / 3);
+  	}
+
+	@media (min-width: 1024px) {
+    	flex-basis: 25%;
+  	}
+
 `;
 
 export const RecipeHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
+
+	h2 {
+		background: rgba(255,255,255, 0.7);
+		padding: 10px;
+	}
+
 `;
 
 export const RecipeOptions = styled.ul`
@@ -21,7 +41,9 @@ export const RecipeOptions = styled.ul`
 `;
 
 export const RecipeOptionLink = styled.li`
-	margin-left: 10px;
+	background: rgba(255,255,255, 0.7);
+	margin-left: 5px;
+	padding: 10px;
 `;
 
 export const RecipeMeta = styled.div`
@@ -35,6 +57,11 @@ export const RecipeImage = styled.div`
 
 export const RecipeIngredientList = styled.ul`
 	flex-basis: 50%;
+	text-align: center;
 `;
 
-export const RecipeIngredient = styled.li``;
+export const RecipeIngredient = styled.li`
+	background: rgba(255,255,255, 0.7);
+	padding: 10px;
+	margin-bottom: 5px;
+`;

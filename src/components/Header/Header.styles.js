@@ -8,7 +8,6 @@ const HeaderComponent = styled.header`
 	height: 60px;
 	justify-content: space-between;
 	padding: 20px;
-	margin-bottom: 30px;
 
 	h1 {
 		font-size: 1.5em;

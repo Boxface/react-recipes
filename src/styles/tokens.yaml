@@ -25,6 +25,3 @@ spacing:
 
 transition:
     button: 0.6s
-
-width:
-    page-container: 1024px
